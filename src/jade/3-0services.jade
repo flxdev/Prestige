@@ -1,0 +1,55 @@
+doctype html
+head
+  title 3-0services
+  include ./_head.jade
+.out
+  include ./_frame.jade
+  .frame.frame_left
+    .breadcrumbs-container
+      .breadcrumbs-inner
+        ul.breadcrumbs-list
+          li
+            a(href='#') Home
+          li
+            a(href='#') Projects
+  include ./_grid.jade
+  .wrapper
+     section.section.section_services.services-inner
+        .lead.parallax(data-speed='15')
+          .title # services
+      .container
+        .task__projects
+          .service__wrapper
+            .item__wrapper.item__left
+              .service__item
+                img(src="img/srvices/service.jpg ", alt="")
+                p.service__text Mounting
+                .service__link
+                  .link_case
+                    a.link-dash.parallax(data-speed='15', href='#') +view more
+            .item__wrapper.item__center
+              .service__item
+                img(src="img/srvices/service.jpg ", alt="")
+                p.service__text Manufacturing
+                  br
+                  | of furniture to order
+                .service__link
+                  .link_case
+                    a.link-dash.parallax(data-speed='15', href='#') +view more
+            .item__wrapper.item__right
+              .service__item
+                img(src="img/srvices/service.jpg ", alt="")
+                p.service__text Interior design
+                .service__link
+                  .link_case
+                    a.link-dash.parallax(data-speed='15', href='#') +view more
+    section.section.section__links
+      a.links.parallax(href='#', data-speed='15')
+        .section_container
+          .topper you can see
+          .middle
+            .text(style="background-image: url('./img/mask.jpg')") see portfolio
+            .arrow
+              .icon(style="background-image: url('./img/icons/arrow.png')")
+  include ./_footer-inner.jade
+include ./_menu.jade

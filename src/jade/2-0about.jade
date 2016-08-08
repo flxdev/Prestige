@@ -1,0 +1,140 @@
+doctype html
+head
+  title 1-0projects-inner
+  include ./_head.jade
+.out
+  include ./_frame.jade
+  .frame.frame_left
+    .breadcrumbs-container
+      .breadcrumbs-inner
+        ul.breadcrumbs-list
+          li
+            a(href='#') Home
+          li
+            a(href='#') Projects
+  include ./_grid.jade
+  .wrapper
+    section.section
+      .section__head.head__projects-inner
+        .head__projects-bg.head-about
+          img(src='img/projects/projects.jpg', alt='')
+        .lead.parallax(data-speed='5')
+          .title # about
+      .container
+        .task__projects
+          .product_selector.product-about
+            .product_selector-item
+              .product__head Our factory has 
+                br
+                |a big history
+            .product_selector-item
+              .text.text-first
+                p
+                  |Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic
+              .text
+                p
+                  |Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic is then transformed into reality. We decided to show you the process and filmed the creation of our office.
+            .product_selector-item.big-text
+              .text
+                p
+                  |Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic is then transformed into reality. We decided to show you the process and filmed the creation of our office. Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic is then transformed into reality. We decided to show you the process and filmed the creation of our office.  
+            .letters
+                .letters_item.letters-a.parallax(data-speed='15',data-direction='1') 0
+                .letters_item.letters-c.parallax(data-speed='25',data-direction='1') 9
+        .task__projects.task-presents
+          .presents__head
+            |Andrew Marchyk present
+          .presents__block.block-text
+          .presents__block.block-text Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic is then transformed into reality. We decided to show you the process and filmed the creation of our office. Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic is then transformed into reality. We decided to show you the process and filmed the creation of our office.  
+          .presents__block.block-img
+            img.parallax(data-speed='20',data-direction='1',src="img/about/marchuk.jpg", alt="")
+          .presents__block.block-float.parallax(data-speed='15',data-direction='1')
+            p Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic is then transformed into reality. 
+            p.presents-article Andrew marchyk, shef
+          .letters
+              .letters_item.letters-a.parallax(data-speed='15',data-direction='1') A
+              .letters_item.letters-c.parallax(data-speed='25',data-direction='1') C
+              .letters_item.letters-y.parallax(data-speed='40',data-direction='1') Y
+              .letters_item.letters-m.parallax(data-speed='15',data-direction='1') M
+              .letters_item.letters-r.parallax(data-speed='25',data-direction='1') ‘‘
+              .letters_item.letters-k.parallax(data-speed='30',data-direction='1') K
+              .letters_item.letters-1.parallax(data-speed='40',data-direction='1') 1
+              .letters_item.letters-7.parallax(data-speed='15',data-direction='1') 7
+        section.section.kredo
+          .container.container__kredo
+            .task__kredo
+              .task__kredo-photo
+                img.parallax(data-speed='20',data-direction='1',src="img/projects/kredo.jpg", alt="")
+              .task__kredo-text.parallax(data-speed='15',data-direction='1') We make a good
+                br
+                | job and love our
+                br
+                | work so much
+          .letters
+              .letters_item.letters-s.parallax(data-speed='15',data-direction='1') S
+              .letters_item.letters-p.parallax(data-speed='25',data-direction='1') P
+              .letters_item.letters-e.parallax(data-speed='40',data-direction='1') E
+        .task__projects.parallax(data-speed='15',data-direction='1')
+          .presents__head.presents-partners
+            |We working with
+          .presents__carousel
+            .presents__wrapper
+              .presents__slide.active
+                //оборачивать в ссылки?
+                .slide_item
+                  img(src="img/about/part1.png", alt="")
+                .slide_item
+                  img(src="img/about/part5.png", alt="")
+                .slide_item
+                  img(src="img/about/part4.png", alt="")
+                .slide_item
+                  img(src="img/about/part3.png", alt="")
+                .slide_item
+                  img(src="img/about/part2.png", alt="")
+                .slide_item
+                  img(src="img/about/part5.png", alt="")
+                .slide_item
+                  img(src="img/about/part6.png", alt="")
+                .slide_item
+                  img(src="img/about/part2.png", alt="")
+                .slide_item
+                  img(src="img/about/part1.png", alt="")
+                .slide_item
+                  img(src="img/about/part3.png", alt="")
+            .presents__next
+                button.carousel_layout-next
+                  .icon
+                    svg(viewbox='0 0 104 116', xmlns='http://www.w3.org/2000/svg')
+                      path(d='m60.511,84.536c-0.386,1.035 0.14,2.187 1.175,2.573l16.745,6.248c-7.854,5.62 -17.1,8.59399 -26.804,8.59399c-25.435,0 -46.127,-20.69299 -46.127,-46.12799c0,-1.104 -0.896,-2 -2,-2s-2,0.896 -2,2c0,27.64 22.487,50.12799 50.127,50.12799c9.725,0 19.026,-2.75 27.111,-7.966l-3.087,14.551c-0.229,1.07999 0.461,2.142 1.541,2.37099c0.14,0.03 0.279,0.044 0.417,0.044c0.925,0 1.755,-0.645 1.954,-1.586l4.68999,-22.105l-21.17,-7.898c-1.032,-0.385 -2.185,0.139 -2.572,1.174zm-8.136,-74.214c-9.728,0 -19.03,2.749 -27.11,7.963l3.086,-14.548c0.229,-1.081 -0.46,-2.142 -1.541,-2.371c-1.077,-0.229 -2.143,0.461 -2.371,1.542l-4.69,22.104l21.17,7.898c0.23,0.086 0.467,0.127 0.699,0.127c0.811,0 1.573,-0.498 1.874,-1.302c0.386,-1.034 -0.14,-2.187 -1.175,-2.573l-16.747,-6.25c7.85,-5.618 17.097,-8.591 26.806,-8.591c25.434,0 46.125,20.691 46.125,46.125c0,1.104 0.896,2 2,2s2,-0.896 2,-2c-0.001,-27.638 -22.487,-50.124 -50.126,-50.124z')
+
+
+        //видео по желанию <video autoplay loop></video>
+        .task__projects.service-inner.parallax(data-speed='15',data-direction='1')
+          .product_selector
+            .product_selector-photo.photo_right.parallax(data-speed='10',data-direction='-1')
+              img(src="img/projects/here.jpg", alt="")
+              p.text Two days before the release
+            .product_selector-photo.photo_left.parallax(data-speed='10',data-direction='1')
+              img.parallax(data-speed='10',data-direction='1',src="img/projects/half.jpg", alt="")
+              p.text.parallax(data-speed='5',data-direction='1') Two days before the release, Uli Sigg and director Michael Schindhelm attended
+
+        .task__projects.parallax(data-speed='5',data-direction='1')
+          .product_selector
+            .product_selector-photo.photo_center
+              img.parallax(data-speed='15',data-direction='1',src="img/projects/photo_3.jpg", alt="")
+              p.text.parallax(data-speed='15',data-direction='1') Two days before the release
+        .letters
+          .letters_item.letters-r.parallax(data-direction='1') R
+          .letters_item.letters-i.parallax(data-speed='25',data-direction='1') I
+          .letters_item.letters-g.parallax(data-direction='1') G
+          .letters_item.letters-t.parallax(data-direction='1') T
+    section.section.section__links
+      a.links.parallax(href='#', data-speed='15')
+        .section_container
+          .topper you can see
+          .middle
+            .text(style="background-image: url('./img/mask.jpg')") see projects
+            .arrow
+              .icon(style="background-image: url('./img/icons/arrow.png')")
+  include ./_footer-inner.jade
+include ./_menu.jade

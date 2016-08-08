@@ -1,0 +1,23 @@
+//fonts
+@include font-face('PragmaticaCondensedBlack', "../fonts/PragmaticaCondensedBlack" ,null, null, ttf eot woff2 woff svg);
+@include font-face('PragmaticaBook', "../fonts/PragmaticaBook" ,null, null, ttf eot woff2 woff svg);
+@include font-face('PragmaticaBold', "../fonts/PragmaticaBold" ,null, null, ttf eot woff2 woff svg);
+@include font-face('PragmaticaBlack', "../fonts/PragmaticaBlack" ,null, null, ttf eot woff2 woff svg);
+
+
+$PragmaticaCondensedBlack: 'PragmaticaCondensedBlack', $font-stack-helvetica;
+$PragmaticaBook: 'PragmaticaBook', $font-stack-helvetica;
+$PragmaticaBold: 'PragmaticaBold', $font-stack-helvetica;
+$PragmaticaBlack: 'PragmaticaBlack', $font-stack-helvetica;
+
+//colors
+$darkGrey: #191919;
+$red: #fd2f2f;
+$white: #ffffff;
+$grey: #787878;
+$letters: #222222;
+
+//dimentions
+
+$h90: 90px;
+$min-width: 980px;

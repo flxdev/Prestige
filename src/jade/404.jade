@@ -1,0 +1,25 @@
+doctype html
+head
+  title 1-0projects-inner
+  include ./_head.jade
+.out
+  include ./_frame.jade
+  .frame.frame_left
+    .breadcrumbs-container
+      .breadcrumbs-inner
+        ul.breadcrumbs-list
+          li
+            a(href='#') Home
+          li
+            a(href='#') Projects
+  include ./_grid.jade
+  .wrapper.wrapper-error
+    .error__container
+      .error__text # 404
+      .error__msg
+        span Page not found
+     .letters
+        .letters_item.letters-a.parallax(data-speed='15',data-direction='1') not found
+
+
+include ./_menu.jade

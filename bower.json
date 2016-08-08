@@ -1,0 +1,17 @@
+{
+  "name": "sweelemk",
+  "version": "1.0.1",
+  "description": "gulp template",
+  "authors": [
+    "sweelemk"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "2.*",
+    "normalize.css": "*",
+    "normalize-css": "^4.2.0"
+  }
+}

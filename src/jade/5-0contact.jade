@@ -1,0 +1,72 @@
+doctype html
+head
+  title 1-0projects-inner
+  include ./_head.jade
+.out
+  include ./_frame.jade
+  .frame.frame_left
+    .breadcrumbs-container
+      .breadcrumbs-inner
+        ul.breadcrumbs-list
+          li
+            a(href='#') Home
+          li
+            a(href='#') Projects
+  include ./_grid.jade
+  .wrapper
+    section.section.section_contact
+      .section__head.head__projects-inner
+        .head__projects-bg.head-about
+        .lead
+          .title # contacts
+      .head__projects-inner.section__map
+        #map_canvas
+        
+      .link_case
+         button.map-trigger(type='button',data-alt-text='-hide map').link-dash -view map
+    section.section
+      .contaiber
+        .c-contact-wrapper
+          .contact__block
+            .block-address
+              .block-address_title address
+              .block-address_container
+                p 220012 Minsk
+                p Nezavisimosti prospect
+                p 177-56 office 56
+          .contact__block
+            .block-address.contact
+              ul.dash-list
+                li 
+                    a(href='tel:') +375 17 394 21 54
+                li
+                  a.mail(href='mailto:') PRESTIGE@GMAIL.COM
+          .contact__block
+            .contact__block-slogan
+              p Do you want
+                br
+                |to write us?
+          .contact__block
+            .contact__block-form
+              form(action='/message', method='post', name='form-contact')
+                .input__wrapper
+                  input.form__input#form_name(type='text', required='required',data-validation="length", data-validation-length="min2")
+                  label.parallax.label__name(for='form_name',data-speed='5') name
+                .input__wrapper
+                  input.form__input#form_mail(type='email',required='required',data-validation="email")
+                  label.parallax.label__mail(for='form_mail',data-speed='5') E-mail
+                .input__wrapper
+                  .wrapper-textarea
+                    textarea.form__input#form_msg(type='textarea',rows='3',required='required',data-validation="length", data-validation-length="min10")
+                  label.parallax.label__msg(for='form_msg',data-speed='5') message
+                  button.form__button(type='submit') send
+                    .icon
+                      svg(viewbox='0 0 41.2 19', xmlns='http://www.w3.org/2000/svg')
+                        path.fill(d='m0,8.9l25,0l0,2l-25,0l0,-2z', clip-rule='evenodd', fill-rule='evenodd')
+                        path.stroke(d='m39.2,9.5l-13.5,7.8l0,-15.6l13.5,7.8z', stroke-miterlimit='10', stroke-width='2', fill='none')
+
+
+
+   
+  include ./_footer-inner.jade
+include ./_menu.jade

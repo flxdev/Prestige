@@ -1,0 +1,550 @@
+doctype html
+head
+  title 4-1designers
+  include ./_head.jade
+.out
+  include ./_frame.jade
+  .frame.frame_left
+    .breadcrumbs-container
+      .breadcrumbs-inner
+        ul.breadcrumbs-list
+          li
+            a(href='1-0projects.html') Home
+          li
+            a(href='1-0projects-inner.html') Projects
+  include ./_grid.jade
+  .wrapper
+    section.section
+      .section__head.head__projects-inner
+        .head__projects-bg.head-about
+          img(src='img/projects/projects.jpg', alt='')
+        .lead.designer__lead.parallax(data-speed='5')
+          .title # dasha 
+            br
+            |chernaia
+      .container.designer__inner-container
+        .task__projects
+          .product_selector.product-about
+            .product_selector-item
+              .product__head 
+            .product_selector-item
+              .text.text-first
+                p
+                  |Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic
+            .product_selector-item.big-text
+              .text
+                p
+                  |Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic is then transformed into reality. We decided to show you the process and filmed the creation of our office.
+        .task__projects.task-designer
+          .designer__img
+            img.parallax(data-speed='20',data-direction='1',src="img/designer/designer2.jpg", alt="")
+          .designer__block.parallax(data-speed='15',data-direction='1')
+            p Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic is then transformed into reality. 
+            p.presents-article Andrew marchyk, shef
+        .letters
+            .letters_item.letters-a.parallax(data-speed='15',data-direction='1') Dasha 
+            .letters_item.letters-c.parallax(data-speed='25',data-direction='1') Chernaia
+       .container
+          .projects
+            .projects__designer Dasha`s projects
+            .projects__container
+              .project__grid
+                .projects-col.parallax(data-speed='15')
+                  a.project__item.pos-bottom(href='#modal1')
+                    .project__media.designer-media
+                      img.project__image(src='img/projects/img1.jpg')
+                    .project__name
+                      .name
+                        span woodtable
+                      .category interior design
+                    .project__date 2016
+                .projects-col.parallax(data-speed='25')
+                  a.project__item.item__big(href='#modal2')
+                    .project__media.designer-media
+                      img.project__image(src='img/projects/img2.jpg')
+                    .project__name
+                      .name
+                        span Toilet in
+                        br
+                        span the alfabank
+                      .category interior design
+                    .project__date 2016
+                .projects-col.parallax(data-speed='15')
+                  a.project__item.pos-top(href='#modal3')
+                    .project__media.designer-media
+                      img.project__image(src='img/projects/img3.jpg')
+                    .project__name
+                      .name
+                        span Big brotherи
+                        br
+                        span is watching you
+                      .category design design
+                    .project__date 2016
+                .projects-col.parallax(data-speed='25')
+                  a.project__item.pos-top(href='')
+                    .project__media.designer-media
+                      img.project__image(src='img/projects/img4.jpg')
+                    .project__name
+                      .name
+                        span woodtable
+                      .category interior design
+                    .project__date 2016
+                .projects-col.parallax(data-speed='15')
+                  a.project__item.pos-bottom(href='')
+                    .project__media.designer-media
+                      img.project__image(src='img/projects/img5.jpg')
+                    .project__name
+                      .name
+                        span Big brother
+                      .category interior design
+                    .project__date 2019
+                
+    section.section.section__links
+      a.links.parallax(href='#', data-speed='15')
+        .section_container
+          .topper you can see
+          .middle
+            .text(style="background-image: url('../img/mask.jpg')") next designer
+            .arrow
+              .icon(style="background-image: url('../img/icons/arrow.png')")
+  include ./_footer-inner.jade
+.popup__wrapper#modal1
+    .popup__container
+      .popup__nav
+        .close
+          span.menu
+      .wrapper__galery
+        .galery__nav
+        .project__gallery
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+              .item__title 11Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+              .item__title 1Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+              .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+             .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+              .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+              .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+              .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+              .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+              .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+              .item__title 1Big brother is watching you
+
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+              .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+              .item__title Big brother is watching you
+        .galery__description-wrapper
+          .galery__description
+            .item__format
+              .link_case
+                a.link-dash 1.png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+        .number
+          span
+        .number__sum
+          span 11
+
+.popup__wrapper#modal2
+    .popup__container
+      .popup__nav
+        .close
+          span.menu
+      .wrapper__galery
+        .galery__nav
+        .project__gallery
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+            .item__title B2ig brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+            .item__title 22Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/room.jpg", alt="")
+            .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+            .item__title 222Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/room.jpg", alt="")
+            .item__title 2Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/room.jpg", alt="")
+            .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/room.jpg", alt="")
+            .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/room.jpg", alt="")
+            .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/room.jpg", alt="")
+            .item__title Big brother is watching you
+        .galery__description-wrapper
+          .galery__description
+            .item__format
+              .link_case
+                a.link-dash 2.png2
+              .link_case  
+                a.link-dash .pdf2
+              .link_case  
+                a.link-dash .pptx2
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png2
+              .link_case  
+                a.link-dash .pdf2
+              .link_case  
+                a.link-dash .pptx2
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png2
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png2
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png2
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png2
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png2
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png2
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+        .number
+          span
+        .number__sum
+          span 11
+.popup__wrapper#modal3
+    .popup__container
+      .popup__nav
+        .close
+          span.menu
+      .wrapper__galery
+        .galery__nav
+        .project__gallery
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+            .item__title 3Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+            .item__title 3Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+            .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+            .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+            .item__title 22Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+            .item__title 2Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+            .item__title 22Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+            .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+            .item__title Big brother is watching you
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+            .item__title Big brother is watching you
+
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+          .project__galery-item
+            .item_photo
+              img(src="img/projects/galery1.jpg", alt="")
+        .galery__description-wrapper
+          .galery__description
+            .item__format
+              .link_case
+                a.link-dash .png3
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png3
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png3
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png3
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png3
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png3
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png3
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png3
+              .link_case  
+                a.link-dash .pdf3
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png3
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx3
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+            .item__format
+              .link_case
+                a.link-dash .png
+              .link_case  
+                a.link-dash .pdf
+              .link_case  
+                a.link-dash .pptx
+              .link_case  
+        .number
+          span
+        .number__sum
+          span 11
+include ./_menu.jade

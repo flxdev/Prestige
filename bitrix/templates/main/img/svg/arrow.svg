@@ -1,0 +1,12 @@
+<svg viewBox="0 0 41.2 19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g>
+		<clipPath id="hexagonal-mask">
+			<path class="fill" d="m0,8.9l25,0l0,2l-25,0l0,-2z" clip-rule="evenodd" fill-rule="evenodd"/>
+			<path class="stroke" d="m39.2,9.5l-13.5,7.8l0,-15.6l13.5,7.8z" stroke-miterlimit="10" stroke-width="2" fill="none"/>
+		</clipPath>
+	</g>
+	<g>
+		<image clip-path="url(#hexagonal-mask)" height="100%" width="100%" xlink:href="../mask.jpg" />
+	</g>
+	
+</svg>

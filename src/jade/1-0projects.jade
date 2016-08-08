@@ -1,0 +1,107 @@
+doctype html
+head
+  title 1-0projects
+  include ./_head.jade
+.out
+  include ./_frame.jade
+  .frame.frame_left
+    .breadcrumbs-container
+      .breadcrumbs-inner
+        ul.breadcrumbs-list
+          li
+            a(href='#') Home
+  include ./_grid.jade
+  .wrapper
+    section.section
+      .section__head.head__projects
+        .section_container
+          .lead.parallax(data-speed='5')
+            .title # projects
+      .container
+        .projects
+          .filter
+            .filter__container.parallax(data-speed='5')
+              button.filter__item(data-filter='*')
+                span All projects
+                span.counter 38
+              button.filter__item(data-filter='.interior')
+                span Interior design
+                span.counter 25
+              button.filter__item(data-filter='.design')
+                span Design furniture
+                span.counter 13
+          .projects__container
+            .project__grid
+              .projects-col.interior.parallax(data-speed='15')
+                a.project__item.pos-bottom(href='')
+                  .project__media
+                    img.parallax(src='img/projects/small.jpg', alt='', data-speed='15', data-direction='-1')
+                  .project__name
+                    .name
+                      span woodtable
+                    .category interior design
+              .projects-col.design.parallax(data-speed='25')
+                a.project__item.item__big(href='')
+                  .project__media
+                    img.parallax(src='img/projects/small.jpg', alt='', data-speed='15', data-direction='-1')
+                  .project__name
+                    .name
+                      span Toilet in
+                      br
+                      span the alfabank
+                    .category interior design
+              .projects-col.design.parallax(data-speed='15')
+                a.project__item.pos-top(href='')
+                  .project__media
+                    img.parallax(src='img/projects/small.jpg', alt='', data-speed='15', data-direction='-1')
+                  .project__name
+                    .name
+                      span Big brother
+                      br
+                      span is watching you
+                    .category design design
+              .projects-col.interior.parallax(data-speed='25')
+                a.project__item.pos-top(href='')
+                  .project__media
+                    img.parallax(src='img/projects/small.jpg', alt='', data-speed='15', data-direction='-1')
+                  .project__name
+                    .name
+                      span woodtable
+                    .category interior design
+              .projects-col.interior.parallax(data-speed='15')
+                a.project__item.pos-bottom(href='')
+                  .project__media
+                    img.parallax(src='img/projects/small.jpg', alt='', data-speed='15', data-direction='-1')
+                  .project__name
+                    .name
+                      span Big brother
+                    .category interior design
+              .projects-col.design.parallax(data-speed='25')
+                a.project__item.item__big(href='')
+                  .project__media
+                    img.parallax(src='img/projects/small.jpg', alt='', data-speed='15', data-direction='-1')
+                  .project__name
+                    .name
+                      span Toilet in
+                      br
+                      span the alfabank
+                    .category interior design
+          .letters
+            .letters_item.letters-p.parallax(data-speed='15', data-direction='-1') P
+            .letters_item.letters-r.parallax(data-speed='20', data-direction='-1') R
+            .letters_item.letters-o.parallax(data-speed='25', data-direction='-1') O
+            .letters_item.letters-j.parallax(data-speed='15', data-direction='-1') j
+            .letters_item.letters-e.parallax(data-speed='20', data-direction='-1') E
+            .letters_item.letters-c.parallax(data-speed='25', data-direction='-1') C
+            .letters_item.letters-t.parallax(data-speed='15', data-direction='-1') T
+            .letters_item.letters-s.parallax(data-speed='20', data-direction='-1') S
+    section.section.section__links
+      a.links.parallax(href='#', data-speed='15')
+        .section_container
+          .topper you can see
+          .middle
+            .text(style="background-image: url('./img/mask.jpg')") next project
+            .arrow
+              .icon(style="background-image: url('./img/icons/arrow.png')")
+  include ./_footer-inner.jade
+include ./_menu.jade

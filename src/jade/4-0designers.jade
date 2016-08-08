@@ -1,0 +1,122 @@
+doctype html
+head
+  title 4-0designers
+  include ./_head.jade
+.out
+  include ./_frame.jade
+  .frame.frame_left
+    .breadcrumbs-container
+      .breadcrumbs-inner
+        ul.breadcrumbs-list
+          li
+            a(href='#') Home
+          li
+            a(href='#') Projects
+  include ./_grid.jade
+  .wrapper
+    section.section
+      .section__head.head__projects-inner
+        .head__projects-bg.head-about
+          img(src='img/projects/projects.jpg', alt='')
+        .lead.parallax(data-speed='5')
+          .title # designers
+      .container
+        .task__projects
+          .product_selector.product-about
+            .product_selector-item
+              .product__head Our designers
+            .product_selector-item
+              .text.text-first
+                p
+                  |Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic
+            .product_selector-item.big-text
+              .text
+                p
+                  |Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic is then transformed into reality. We decided to show you the process and filmed the creation of our office.
+        .projects
+          .projects__container
+            .project__grid.project__grid-designers
+              .projects-col.parallax(data-speed='10', data-direction='1')
+                a.project__item(href='')
+                  span.counter.parallax(data-speed='25', data-direction='-1') 54.
+                  .project__media
+                    img.parallax(src='img/designer/howard.jpg', alt='',data-speed='5', data-direction='-1')
+                  .project__name
+                    .name
+                      span Dasha Chernaia
+                    .category interior design
+              .projects-col.parallax(data-speed='25')
+                a.project__item(href='')
+                  span.counter.parallax(data-speed='25', data-direction='-1') 54.
+                  .project__media
+                    img.parallax(src='img/designer/designer2.jpg', alt='', data-speed='5', data-direction='-1')
+                  .project__name
+                    .name
+                      span Dasha Chernaia
+                    .category interior design
+              .projects-col.parallax(data-speed='15')
+                a.project__item(href='')
+                  span.counter.parallax(data-speed='25', data-direction='-1') 54.
+                  .project__media
+                    img.parallax(src='img/designer/howard.jpg', alt='', data-speed='5', data-direction='-1')
+                  .project__name
+                    .name
+                      span Dasha Chernaia
+                    .category design design
+              .projects-col.parallax(data-speed='25')
+                a.project__item(href='')
+                  span.counter.parallax(data-speed='25', data-direction='-1') 54.
+                  .project__media
+                    img.parallax(src='img/projects/small.jpg', alt='', data-speed='5', data-direction='-1')
+                  .project__name
+                    .name
+                      span Dasha Chernaia
+                    .category interior design
+            
+            .project__grid.project__grid-designers
+              .projects-col.parallax(data-speed='10', data-direction='1')
+                a.project__item(href='')
+                  span.counter.parallax(data-speed='25', data-direction='-1') 04.
+                  .project__media
+                    img.parallax(src='img/designer/howard.jpg', alt='',data-speed='5', data-direction='-1')
+                  .project__name
+                    .name
+                      span Dasha Chernaia
+                    .category interior design
+              .projects-col.parallax(data-speed='25')
+                a.project__item(href='')
+                  span.counter.parallax(data-speed='25', data-direction='-1') 57.
+                  .project__media
+                    img.parallax(src='img/designer/designer2.jpg', alt='', data-speed='5', data-direction='-1')
+                  .project__name
+                    .name
+                      span Dasha Chernaia
+                    .category interior design
+              .projects-col.parallax(data-speed='15')
+                a.project__item(href='')
+                  span.counter.parallax(data-speed='25', data-direction='-1') 54.
+                  .project__media
+                    img.parallax(src='img/designer/howard.jpg', alt='', data-speed='5', data-direction='-1')
+                  .project__name
+                    .name
+                      span Dasha Chernaia
+                    .category design design
+              .projects-col.parallax(data-speed='25')
+                a.project__item(href='')
+                  span.counter.parallax(data-speed='25', data-direction='-1') 54.
+                  .project__media
+                    img.parallax(src='img/projects/small.jpg', alt='', data-speed='5', data-direction='-1')
+                  .project__name
+                    .name
+                      span Dasha Chernaia
+                    .category interior design
+    section.section.section__links
+      a.links.parallax(href='#', data-speed='15')
+        .section_container
+          .topper you can see
+          .middle
+            .text(style="background-image: url('./img/mask.jpg')") see projects
+            .arrow
+              .icon(style="background-image: url('./img/icons/arrow.png')")
+  include ./_footer-inner.jade
+include ./_menu.jade

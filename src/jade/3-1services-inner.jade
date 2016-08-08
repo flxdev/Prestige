@@ -1,0 +1,74 @@
+doctype html
+head
+  title 3-1services-inner
+  include ./_head.jade
+.out
+  include ./_frame.jade
+  .frame.frame_left
+    .breadcrumbs-container
+      .breadcrumbs-inner
+        ul.breadcrumbs-list
+          li
+            a(href='#') Home
+          li
+            a(href='#') Projects
+  include ./_grid.jade
+  .wrapper
+    section.section
+      .section__head.head__projects-inner
+        .head__projects-bg.head-about
+          img(src='img/projects/projects.jpg', alt='')
+        .lead.parallax(data-speed='5')
+          .title # Mounting
+      .container.service__inner-container
+        .task__projects
+          .product_selector.product-about
+            .product_selector-item
+              .product__head We provide 
+                br
+                |the best 
+                br 
+                |service
+            .product_selector-item
+              .text.text-first
+                p
+                  |Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic
+              .text.text-second
+                p
+                  |Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic is then transformed into reality. We decided to show you the process and filmed the creation of our office.
+            .product_selector-item.big-text
+              .text
+                ul
+                   li Our clients want to know how we
+                   li Many of our clients want to know how we
+                   li What processes happen in our brains, 
+                    br
+                    |and how this
+                   li We decided to show you the process
+                    br
+                    |and filmed the creation of our office. 
+
+        //видео по желанию <video autoplay loop></video>
+        .task__projects.service-inner
+          .product_selector
+            .product_selector-photo.photo_right.parallax(data-speed='5',data-direction='-1')
+              img(src="img/projects/here.jpg", alt="")
+              p.text Two days before the release
+            .product_selector-photo.photo_left.parallax(data-speed='20',data-direction='1')
+              img.parallax(data-speed='10',data-direction='1',src="img/projects/half.jpg", alt="")
+              p.text.parallax(data-speed='5',data-direction='1') Two days before the release, Uli Sigg and director Michael Schindhelm attended
+        .letters
+          .letters_item.letters-r.parallax(data-direction='1') R
+          .letters_item.letters-i.parallax(data-speed='25',data-direction='1') I
+          .letters_item.letters-g.parallax(data-direction='1') G
+          .letters_item.letters-t.parallax(data-speed='25',data-direction='1') T
+    section.section.section__links
+      a.links.parallax(href='#', data-speed='15')
+        .section_container
+          .topper you can see
+          .middle
+            .text(style="background-image: url('./img/mask.jpg')") next services
+            .arrow
+              .icon(style="background-image: url('./img/icons/arrow.png')")
+  include ./_footer-inner.jade
+include ./_menu.jade
