@@ -3143,10 +3143,16 @@ body {
 	&.item__left{
 		opacity: .2;
         transform: translateX(-350px) translateZ(-200px) rotateY(40deg);
+        &:hover{
+        	opacity:.6;
+        }
 	}
 	&.item__right{
 		opacity: .2;
     transform: translateX(350px) translateZ(-200px) rotateY(-40deg);
+    &:hover{
+    	opacity:.6;
+    }
 	}
 }
 }
@@ -3566,6 +3572,28 @@ body {
 			width:100%;
 			@include x-rem(padding, 30px 60px 30px 90px);
 			position: relative;
+			.form__succes{
+				text-align: center;
+				display: none;
+				
+				 p{
+				 	text-align: center;
+				 	color:$grey;
+				 	font-family: $PragmaticaBook;
+				 	@include x-rem(font-size, 14px);
+				 	text-transform: uppercase;
+				 	position: relative;
+				z-index: 3;
+				 }
+				.letters{
+					.letters-r{
+						@include x-rem(font-size, 80px);
+						bottom: -100%;
+						right:20%;
+						z-index: 0;
+					}
+				}
+			}
 			form{
 				width:100%;
 				textarea{
@@ -3577,13 +3605,9 @@ body {
 					border:none;
 					line-height:2.2 !important;
 					word-wrap: break-word;
-
 				}
 				.form-error{
-					color:$grey;
-					line-height:2;
-					position: relative;
-					z-index: 2;
+					display: none !important;
 				}
 				label{
 					position: absolute;
@@ -3677,6 +3701,10 @@ body {
 					z-index: 4;
 					background:url(../img/bg/textarea.png);
 				  background-repeat:repeat-y;
+				  .help-block{
+						position: absolute;
+						bottom:-20px;
+					}
 				  .form__input{
 				  	position: relative;
 				  	border-bottom:none;

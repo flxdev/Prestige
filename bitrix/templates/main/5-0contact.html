@@ -103,18 +103,18 @@
 					</div>
 					<div class="contact__block">
 						<div class="contact__block-form">
-							<form action="/message" method="post" name="form-contact">
+							<form action="/message" method="post" name="form-contact" class="js-validate">
 								<div class="input__wrapper">
-									<input id="form_name" type="text" required="required" data-validation="length" data-validation-length="min2" class="form__input">
+									<input id="form_name" type="text" data-validation="length" data-validation-length="min2" class="form__input">
 									<label for="form_name" data-speed="5" class="parallax label__name">name</label>
 								</div>
 								<div class="input__wrapper">
-									<input id="form_mail" type="email" required="required" data-validation="email" class="form__input">
+									<input id="form_mail" type="email" data-validation="email" class="form__input">
 									<label for="form_mail" data-speed="5" class="parallax label__mail">E-mail</label>
 								</div>
 								<div class="input__wrapper">
 									<div class="wrapper-textarea">
-										<textarea id="form_msg" type="textarea" rows="3" required="required" data-validation="length" data-validation-length="min10" class="form__input"></textarea>
+										<textarea id="form_msg" type="textarea" rows="3" data-validation="length" data-validation-length="min10" class="form__input"></textarea>
 									</div>
 									<label for="form_msg" data-speed="5" class="parallax label__msg">message</label>
 									<button type="submit" class="form__button">send
@@ -127,6 +127,12 @@
 									</button>
 								</div>
 							</form>
+							<div class="form__succes">
+								<p>Thank you! Your message<br>was successfully sent!</p>
+								<div class="letters">
+									<div data-direction="1" class="letters_item letters-r parallax">succes</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

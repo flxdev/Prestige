@@ -870,12 +870,22 @@ autosize($('textarea'));
 		$('.label__msg').css('color','#222')
 	})
 
- $.validate({
-    lang: 'en'
-  });
+  var form_validate = $('.js-validate');
+    if (form_validate.length) {
+        form_validate.each(function () {
+            var form_this = $(this);
+            $.validate({
+                form : form_this,
+                borderColorOnError : true,
+                scrollToTopOnError : false,
+                onSuccess: function($form){
+                     $('.js-validate').hide('fast');
+                     $('.form__succes').show('slow');
+                }
+            });
+        });
+    };
 
 }
-
-
 
 });
