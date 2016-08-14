@@ -84,6 +84,9 @@ body {
 	background-size: cover;
 	min-width: $min-width;
 }
+.parallax{
+	will-change:transform;
+}
 .wgrid {
 	max-width: 1600px;
 	margin: 0 auto;
@@ -131,6 +134,9 @@ body {
 			}
 		}
 	}
+}
+.wrapper{
+	position: relative;
 }
 .frame {
 	position: fixed;
@@ -986,6 +992,15 @@ body {
 					// padding-left: 57px;
 					@include x-rem(padding-left, 57px);
 					position: relative;
+					span{
+						font-family: $PragmaticaBold;
+					font-size: 18px;
+					@include x-rem(font-size, 18px);
+					color: $white;
+					// letter-spacing: 0.9px;
+					@include x-rem(letter-spacing, 0.9px);
+					line-height:1.8;
+					}
 					&::before {
 						content: '';
 						// width: 32px;
@@ -998,12 +1013,6 @@ body {
 						@include x-rem(top, 16px);
 					}
 					.link-shader {
-						font-family: $PragmaticaBold;
-						font-size: 18px;
-						@include x-rem(font-size, 18px);
-						color: $white;
-						// letter-spacing: 0.9px;
-						@include x-rem(letter-spacing, 0.9px);
 						// padding: 4px 0;
 						@include x-rem(padding, 4px 0);
 						position: relative;
@@ -1011,6 +1020,12 @@ body {
 						display: inline-block;
 						// margin-bottom: 4px;
 						@include x-rem(margin-bottom, 4px);
+						font-family: $PragmaticaBold;
+						font-size: 18px;
+						@include x-rem(font-size, 18px);
+						color: $white;
+						// letter-spacing: 0.9px;
+						@include x-rem(letter-spacing, 0.9px);
 						span {
 							font-family: $PragmaticaBook;
 							// font-size: 14px;
@@ -1319,6 +1334,7 @@ body {
 		}
 	}
 }
+
 .product_selector {
 	width: 100%;
 	display: inline-block;
@@ -1386,54 +1402,16 @@ body {
 		}
 	}
 }
-.letters {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 0;
-	.letters_item {
-		font-family: $PragmaticaCondensedBlack;
-		// font-size: 200px;
-		@include x-rem(font-size, 200px);
-		color: $letters;
-		//opacity: 0.05;
-		position: absolute;
-		&.letters-p {
-			top: 3%;
-			left: 9.5%;
-		}
-		&.letters-r {
-			bottom: -2%;
-			right: 27%;
-		}
-		&.letters-e {
-			top: 1%;
-			left: 16%;
-		}
-		&.letters-s {
-			bottom: -3.6%;
-			right: 20.3%;
-		}
-		&.letters-g {
-			bottom: 9.5%;
-			left: 24.2%;
-		}
-		&.letters-i {
-			top: 9.1%;
-			right: 19.1%;
-		}
-		&.letters-w {
-			top: 1.1%;
-			left: 2.1%;
-		}
-		&.letters-b {
-			top: 51.1%;
-			right: 1.1%;
+.product_selector-item{
+	.product__text-wrapper{
+		position: relative;
+		padding-bottom: 3.125rem;
+		.product_selector-title{
+		@include x-rem(left, -46px);
 		}
 	}
 }
+
 .section_services {
 	// padding: 118px 0 139px;
 	@include x-rem(padding, 118px 0 139px);
@@ -1475,6 +1453,11 @@ body {
 				//transform: scale(0.66);
 				transform: translate(0, 0);
 				transition: transform 0.5s ease;
+				z-index: 2;
+				a{
+					position: relative;
+					z-index: 5;
+				}
 				.work_gallery-img {
 					img {
 						opacity: 0.2;
@@ -2008,6 +1991,8 @@ body {
 	  line-height: 1.333;
 		@include x-rem(letter-spacing, 1.5px);
 		@include x-rem(padding-left,380px);
+		position: relative;
+		z-index: 5;
 	}
 	.filter {
 		text-align: center;
@@ -2219,75 +2204,12 @@ body {
 			}
 		}
 	}
-	.letters {
-		.letters_item {
-			&.letters-p {
-				left: 15.2%;
-				top: 32%;
-				@include r(1280) {
-					left: 5%;
-				}
-			}
-			&.letters-r {
-				bottom: auto;
-				left: 23.2%;
-				right: auto;
-				top: 83.5%;
-				@include r(1280) {
-					left: 12.2%;
-				}
-			}
-			&.letters-o {
-				left: 32%;
-				top: 32%;
-				@include r(1280) {
-					left: 25%;
-				}
-			}
-			&.letters-j {
-				bottom: auto;
-				left: 39.5%;
-				right: auto;
-				top: 83.5%;
-			}
-			&.letters-e {
-				left: 47%;
-				top: 32%;
-				@include r(1280) {
-					left: 48%;
-				}
-			}
-			&.letters-c {
-				bottom: auto;
-				left: 51.5%;
-				right: auto;
-				top: 83.5%;
-				@include r(1280) {
-					left: 57.5%;
-				}
-			}
-			&.letters-t {
-				right: 27%;
-				top: 32%;
-				@include r(1280) {
-					right: 21%;
-				}
-			}
-			&.letters-s {
-				left: auto;
-				top: 83.5%;
-				bottom: auto;
-				right: 23.3%;
-				@include r(1280) {
-					right: 10.3%;
-				}
-			}
-		}
-	}
 				
 }
 .section{
 	position: relative;
+	z-index: 1;
+
 }
 .section__links {	
 	// padding: 100px 0 137px;
@@ -2610,17 +2532,9 @@ body {
 				 margin-left: 0;
 				}
 		}
-		.photo_center{
-			display: block !important;
-			margin:0 auto;
-		}
-		.photo_right{
-			@include x-rem(margin-left, 30px);
-		}
 		.product_selector-photo{
 				display: inline-block;
 				@include x-rem(max-width, 510px);
-				max-height: 700px;
 				overflow:hidden; 
 
 				img{
@@ -2645,6 +2559,46 @@ body {
 		}
 	}
 }
+///// РАСКИДЫВАЕМ БЛОКИ  ФОТОГРАФИЙ В РАЗНЫЕ СТРОНЫ
+// И СТИЛИЗУЕМ
+.photo--add{
+	text-align:center;
+	@include x-rem(margin-bottom, 75px);
+	@include clearfix;
+	&:nth-child(3n+1){
+		.photo__wrapper{
+			float:left;
+	}
+}
+	&:nth-child(3n+2){
+		.photo__wrapper{
+		float:right;
+		}
+	}
+	&:nth-child(3n){
+		.photo__wrapper{
+		float:none;
+		}
+	}
+}
+
+.photo__wrapper{
+	display: inline-block;
+	.photo__wrapper-container{
+		overflow: hidden;
+	}
+	.text{
+		@include x-rem(margin-top, 35px);
+		color:$white;
+		@include x-rem(font-size, 12px);
+		font-family: $PragmaticaBook;
+		text-align: right;
+	  text-transform: uppercase;
+	  letter-spacing: 2px;
+	  line-height: 2;
+	}
+}
+
 .project__gallery {
 	@include x-rem(margin, 45px 0 0);
 	position: relative;
@@ -2821,49 +2775,6 @@ body {
 		left:110px;
 	}
 }
-.kredo{
-	.letters{
-		.letters_item{
-			&.letters-p{
-				left:3%;
-				bottom:5%;
-				top:auto;
-				}
-			&.letters-s{
-				bottom: -80.2%;
-			}
-			&.letters-e{
-				right: 30.2%;
-				left:auto;
-			}
-	}
-}
-}
-.project__case{
-	.letters{
-		.letters_item{
-			&.letters-t{
-				left:13%;
-				top: 20%;
-				}
-			&.letters-r{
-				left:40%;
-				top: 0;
-				bottom:auto;
-				right:auto;
-				}
-			&.letters-i{
-				right:47.5%;
-				top: 50%;
-				}
-			&.letters-g{
-				right:27.5%;
-				bottom: 5%;
-				left:auto;
-				}
-	}
-}
-} 
 .container__kredo{
 	@include x-rem(margin, 122px auto);
 	@include x-rem(padding, 0 160px);
@@ -2912,17 +2823,6 @@ body {
 	.big-text{
 		float: right!important;
 	}
-	.letters{
-		.letters_item{
-			bottom: 0;
-			&.letters-a{
-				left: 25%;
-			}
-			&.letters-c{
-				right: 30.2%;
-			}
-	}
-}
 }
 .task-presents{
 	:nth-child(2){
@@ -2930,43 +2830,6 @@ body {
 			@include x-rem(width,262px);
 		}
 	}
-	.letters{
-		.letters_item{
-			&.letters-a{
-				left:33%;
-				top:20%;
-				}
-			&.letters-c{
-				top:45%;
-				left:50%;
-			}
-			&.letters-y{
-				right: 20.2%;
-				top:15%;
-			}
-			&.letters-m{
-				left:10%;
-				bottom: -30%;
-			}
-			&.letters-r{
-				left: 30%;
-				bottom: -15%;
-			}
-			&.letters-k{
-				right: 5%;
-				bottom:-15%;
-			}
-			&.letters-1{
-				top:5%;
-				left:20%;
-			}
-			&.letters-7{
-				top:5%;
-				right:40%;
-			}
-
-	}
-}
 }
 .presents__block{
 	color:$white;
@@ -3009,6 +2872,7 @@ body {
 	@include x-rem(margin-bottom,40px);
 	display:flex;
 	@include x-rem(padding-left,20px);
+	@include clearfix;
 	.presents__wrapper{
 		@include x-rem(width,990px);
 		height:100%;
@@ -3156,31 +3020,6 @@ body {
 	}
 }
 }
-//service inner
-.service__inner-container{
-
-	.letters{
-		.letters_item{
-			&.letters-r{
-				left:33%;
-				top:40%;
-				}
-			&.letters-i{
-				top:80%;
-				left:47.5%;
-			}
-			&.letters-g{
-				left:auto;
-				right: 20.2%;
-				bottom:-35%;
-			}
-			&.letters-t{
-				left:10%;
-				bottom:-50%;
-			}
-		}
-	}
-}
 //desighners
 .project__grid-designers{
 	.projects-col{
@@ -3269,27 +3108,7 @@ body {
 		}
 	 }
 }
-.designer__inner-container{
-	.letters{
-		@include x-rem(letter-spacing,40px);
-		.letters_item{
-			&.letters-a{
-				left:23%;
-				top:25%;
-				}
-			&.letters-c{
-				bottom:-35%;
-				left:10%;
-			}
-			&.letters-g{
-				left:auto;
-				right: 20.2%;
-				bottom:-35%;
-			}
 
-		}
-	}
-}
 .popup__wrapper{
 	top: 0;
   left: 0;
@@ -3715,21 +3534,7 @@ body {
 	}
 }
 //404
-.wrapper-error{
-	position: relative;
-	height:100vh;
-		.letters {
-			text-align: center;
-		.letters_item {
-			&.letters-a {
-				position: relative;
-				margin-top: 50vh;
-				display:inline-block;
-				animation: errbg 60s linear infinite;
-			}
-		}
-	}
-}
+
 .error__container{
 	@include x-rem(max-width, 1100px);
 	@include x-rem(max-height, 700px);
@@ -3795,4 +3600,258 @@ body {
     transform:translate3d(0);
   }
 }
+}
+//буквы почти всех страниц будут тут
+.letters {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	.letters_item {
+		font-family: $PragmaticaCondensedBlack;
+		@include x-rem(font-size, 200px);
+		color: $letters;
+		position: absolute;
+		//index letters
+		&.letters-p {
+			top: 3%;
+			left: 9.5%;
+		}
+		&.letters-r {
+			bottom: -2%;
+			right: 27%;
+		}
+		&.letters-e {
+			top: 1%;
+			left: 16%;
+		}
+		&.letters-s {
+			bottom: -3.6%;
+			right: 20.3%;
+		}
+		&.letters-g {
+			bottom: 9.5%;
+			left: 24.2%;
+		}
+		&.letters-i {
+			top: 9.1%;
+			right: 19.1%;
+		}
+		&.letters-b {
+			top: 51.1%;
+			right: 1.1%;
+		}
+		//projects letters
+		&.project.letters-p {
+			left: 15.2%;
+			top: 32%;
+			@include r(1280) {
+				left: 5%;
+			}
+		}
+		&.project.letters-r {
+			bottom: auto;
+			left: 23.2%;
+			right: auto;
+			top: 63.5%;
+			@include r(1280) {
+				left: 12.2%;
+			}
+		}
+		&.project.letters-o {
+			left: 32%;
+			top: 32%;
+			@include r(1280) {
+				left: 25%;
+			}
+		}
+		&.project.letters-j {
+			bottom: auto;
+			left: 39.5%;
+			right: auto;
+			top: 63.5%;
+		}
+		&.project.letters-e {
+			left: 47%;
+			top: 32%;
+			@include r(1280) {
+				left: 48%;
+			}
+		}
+		&.project.letters-c {
+			bottom: auto;
+			left: 51.5%;
+			right: auto;
+			top: 63.5%;
+			@include r(1280) {
+				left: 57.5%;
+			}
+		}
+		&.project.letters-t {
+			left:auto;
+			right: 27%;
+			top: 32%;
+			@include r(1280) {
+				right: 21%;
+			}
+		}
+		&.project.letters-s {
+			left: auto;
+			top: 63.5%;
+			bottom: auto;
+			right: 23.3%;
+			@include r(1280) {
+				right: 10.3%;
+			}
+		}
+		//projects-inner
+			&.project-inner.letters-p{
+				left:13%;
+				top:50%;
+				}
+			&.project-inner.letters-s{
+				bottom: 30%;
+				right:25%;
+			}
+			&.project-inner.letters-e{
+				right: 40.2%;
+				top:19%;
+				left:auto;
+			}
+			&.project-inner.letters-t{
+				left:45%;
+				top: 30%;
+				}
+			&.project-inner.letters-r{
+				left:40%;
+				top: 0;
+				bottom:auto;
+				right:auto;
+				}
+			&.project-inner.letters-i{
+				right:47.5%;
+				top: 50%;
+				}
+			&.project-inner.letters-g{
+				right:27.5%;
+				bottom: 5%;
+				left:auto;
+				}
+			&.project-inner.letters-w{
+				top:17.5%;
+				left: 5%;
+				}
+			&.project-inner.letters-b{
+				top:20.5%;
+				right: 10%;
+				}
+			//service inner
+			&.service-inner.letters-r{
+				top:40%;
+				}
+			&.service-inner.letters-i{
+				top:80%;
+				left:47.5%;
+			}
+			&.service-inner.letters-g{
+				left:auto;
+				right: 20.2%;
+				bottom:25%;
+			}
+			&.service-inner.letters-t{
+				left:10%;
+				bottom:50%;
+			}
+			&.designer-inner.letters-a{
+				@include x-rem(letter-spacing,40px);
+				left:23%;
+				top:28%;
+				}
+			&.designer-inner.letters-c{
+				@include x-rem(letter-spacing,40px);
+				bottom:30%;
+				left:10%;
+			}
+			&.about.letters-0{
+				top:12.8%;
+				left: 25%;
+			}
+			&.about.letters-9{
+				top:12.8%;
+				right: 30.2%;
+			}
+			&.about.letters-t{
+				left:2%;
+				top:20%;
+				}
+			&.about.letters-a{
+				left:18%;
+				top:30%;
+				}
+			&.about.letters-c{
+				top:45%;
+				left:50%;
+			}
+			&.about.letters-i{
+				bottom:10%;
+				left:47.5%;
+				right:auto;
+				top:auto;
+			}
+			&.about.letters-y{
+				right: 70.2%;
+				top:70%;
+			}
+			&.about.letters-m{
+				right:5%;
+				top: 20%;
+			}
+			&.about.letters-z{
+				left: 32%;
+				top: 34%;
+			}
+			&.about.letters-k{
+				right: 5%;
+				bottom:45%;
+			}
+			&.about.letters-1{
+				top:25%;
+				left:20%;
+			}
+			&.about.letters-7{
+				top:25%;
+				right:40%;
+			}
+			&.about.letters-r{
+				bottom:23.5%;
+				right:55%;
+			}
+			&.about.letters-g{
+				bottom:15.5%;
+				left:10%;
+			}
+			&.about.letters-s{
+				bottom:40.5%;
+				right:22%;
+			}
+	}
+}
+
+	
+.wrapper-error{
+	position: relative;
+	height:100vh;
+		.letters {
+			text-align: center;
+		.letters_item {
+			&.letters-a {
+				position: relative;
+				margin-top: 50vh;
+				display:inline-block;
+				animation: errbg 60s linear infinite;
+			}
+		}
+	}
 }

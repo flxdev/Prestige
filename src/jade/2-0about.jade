@@ -38,9 +38,7 @@ head
               .text
                 p
                   |Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic is then transformed into reality. We decided to show you the process and filmed the creation of our office. Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic is then transformed into reality. We decided to show you the process and filmed the creation of our office.  
-            .letters
-                .letters_item.letters-a.parallax(data-speed='15',data-direction='1') 0
-                .letters_item.letters-c.parallax(data-speed='25',data-direction='1') 9
+            
         .task__projects.task-presents
           .presents__head
             |Andrew Marchyk present
@@ -51,15 +49,6 @@ head
           .presents__block.block-float.parallax(data-speed='15',data-direction='1')
             p Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic is then transformed into reality. 
             p.presents-article Andrew marchyk, shef
-          .letters
-              .letters_item.letters-a.parallax(data-speed='15',data-direction='1') A
-              .letters_item.letters-c.parallax(data-speed='25',data-direction='1') C
-              .letters_item.letters-y.parallax(data-speed='40',data-direction='1') Y
-              .letters_item.letters-m.parallax(data-speed='15',data-direction='1') M
-              .letters_item.letters-r.parallax(data-speed='25',data-direction='1') ‘‘
-              .letters_item.letters-k.parallax(data-speed='30',data-direction='1') K
-              .letters_item.letters-1.parallax(data-speed='40',data-direction='1') 1
-              .letters_item.letters-7.parallax(data-speed='15',data-direction='1') 7
         section.section.kredo
           .container.container__kredo
             .task__kredo
@@ -70,10 +59,6 @@ head
                 | job and love our
                 br
                 | work so much
-          .letters
-              .letters_item.letters-s.parallax(data-speed='15',data-direction='1') S
-              .letters_item.letters-p.parallax(data-speed='25',data-direction='1') P
-              .letters_item.letters-e.parallax(data-speed='40',data-direction='1') E
         .task__projects.parallax(data-speed='15',data-direction='1')
           .presents__head.presents-partners
             |We working with
@@ -109,25 +94,22 @@ head
 
 
         //видео по желанию <video autoplay loop></video>
-        .task__projects.service-inner.parallax(data-speed='15',data-direction='1')
-          .product_selector
-            .product_selector-photo.photo_right.parallax(data-speed='10',data-direction='-1')
-              img(src="img/projects/here.jpg", alt="")
-              p.text Two days before the release
-            .product_selector-photo.photo_left.parallax(data-speed='10',data-direction='1')
-              img.parallax(data-speed='10',data-direction='1',src="img/projects/half.jpg", alt="")
-              p.text.parallax(data-speed='5',data-direction='1') Two days before the release, Uli Sigg and director Michael Schindhelm attended
-
-        .task__projects.parallax(data-speed='5',data-direction='1')
-          .product_selector
-            .product_selector-photo.photo_center
-              img.parallax(data-speed='15',data-direction='1',src="img/projects/photo_3.jpg", alt="")
-              p.text.parallax(data-speed='15',data-direction='1') Two days before the release
-        .letters
-          .letters_item.letters-r.parallax(data-direction='1') R
-          .letters_item.letters-i.parallax(data-speed='25',data-direction='1') I
-          .letters_item.letters-g.parallax(data-direction='1') G
-          .letters_item.letters-t.parallax(data-direction='1') T
+        .task__projects.parallax(data-speed='15',data-direction='1')
+          .product_selector-photo.photo--add
+            .photo__wrapper
+              img.parallax(data-speed="5",data-direction='1',src="img/projects/here.jpg", alt="")
+          .product_selector-photo.photo--add
+            .photo__wrapper
+              img.parallax(data-speed="5",data-direction='1',src="img/projects/half.jpg", alt="")
+              p.text.parallax(data-speed="5",data-direction='1') Two days before the release
+          .product_selector-photo.photo--add
+            .photo__wrapper
+              img.parallax(data-speed="5",data-direction='1',src="img/projects/photo_3.jpg", alt="")
+              p.text.parallax(data-speed="5",data-direction='1') Two days before the release
+          .product_selector-photo.photo--add
+            .photo__wrapper
+              img.parallax(data-speed="5",data-direction='1',src="img/projects/photo_3.jpg", alt="")
+              p.text.parallax(data-speed="5",data-direction='1') Two days before the release
     section.section.section__links
       a.links.parallax(href='#', data-speed='15')
         .section_container
@@ -136,5 +118,23 @@ head
             .text(style="background-image: url('./img/mask.jpg')") see projects
             .arrow
               .icon(style="background-image: url('./img/icons/arrow.png')")
+    .letters
+      .letters_item.about.letters-0.parallax(data-speed='15',data-direction='1') 0
+      .letters_item.about.letters-9.parallax(data-speed='25',data-direction='1') 9
+      .letters_item.about.letters-r.parallax(data-direction='1') R
+      .letters_item.about.letters-i.parallax(data-speed='25',data-direction='1') I
+      .letters_item.about.letters-g.parallax(data-direction='1') G
+      .letters_item.about.letters-t.parallax(data-direction='1') T
+      .letters_item.about.letters-s.parallax(data-speed='30',data-direction='1') S
+      .letters_item.about.letters-p.parallax(data-speed='25',data-direction='1') P
+      .letters_item.about.letters-e.parallax(data-speed='40',data-direction='1') E
+      .letters_item.about.letters-a.parallax(data-speed='15',data-direction='-1') A
+      .letters_item.about.letters-c.parallax(data-speed='25',data-direction='1') C
+      .letters_item.about.letters-y.parallax(data-speed='40',data-direction='1') Y
+      .letters_item.about.letters-m.parallax(data-speed='15',data-direction='1') M
+      .letters_item.about.letters-z.parallax(data-speed='25',data-direction='1') ‘‘
+      .letters_item.about.letters-k.parallax(data-speed='30',data-direction='1') K
+      .letters_item.about.letters-1.parallax(data-speed='40',data-direction='1') 1
+      .letters_item.about.letters-7.parallax(data-speed='15',data-direction='1') 7
   include ./_footer-inner.jade
 include ./_menu.jade

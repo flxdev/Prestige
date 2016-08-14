@@ -21,13 +21,13 @@ head
         .projects
           .filter
             .filter__container.parallax(data-speed='5')
-              button.filter__item(data-filter='*')
+              a.filter__item.active(href='#all',data-filter='*')
                 span All projects
                 span.counter 38
-              button.filter__item(data-filter='.interior')
+              a.filter__item(href='#interior',data-filter='.interior')
                 span Interior design
                 span.counter 25
-              button.filter__item(data-filter='.design')
+              a.filter__item(href='#design',data-filter='.design')
                 span Design furniture
                 span.counter 13
           .projects__container
@@ -86,15 +86,7 @@ head
                       br
                       span the alfabank
                     .category interior design
-          .letters
-            .letters_item.letters-p.parallax(data-speed='15', data-direction='-1') P
-            .letters_item.letters-r.parallax(data-speed='20', data-direction='-1') R
-            .letters_item.letters-o.parallax(data-speed='25', data-direction='-1') O
-            .letters_item.letters-j.parallax(data-speed='15', data-direction='-1') j
-            .letters_item.letters-e.parallax(data-speed='20', data-direction='-1') E
-            .letters_item.letters-c.parallax(data-speed='25', data-direction='-1') C
-            .letters_item.letters-t.parallax(data-speed='15', data-direction='-1') T
-            .letters_item.letters-s.parallax(data-speed='20', data-direction='-1') S
+          
     section.section.section__links
       a.links.parallax(href='#', data-speed='15')
         .section_container
@@ -103,5 +95,14 @@ head
             .text(style="background-image: url('./img/mask.jpg')") next project
             .arrow
               .icon(style="background-image: url('./img/icons/arrow.png')")
+    .letters
+      .letters_item.project.letters-p.parallax(data-speed='15', data-direction='-1') P
+      .letters_item.project.letters-r.parallax(data-speed='20', data-direction='-1') R
+      .letters_item.project.letters-o.parallax(data-speed='25', data-direction='-1') O
+      .letters_item.project.letters-j.parallax(data-speed='15', data-direction='-1') j
+      .letters_item.project.letters-e.parallax(data-speed='20', data-direction='-1') E
+      .letters_item.project.letters-c.parallax(data-speed='25', data-direction='-1') C
+      .letters_item.project.letters-t.parallax(data-speed='15', data-direction='-1') T
+      .letters_item.project.letters-s.parallax(data-speed='20', data-direction='-1') S
   include ./_footer-inner.jade
 include ./_menu.jade

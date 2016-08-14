@@ -18,8 +18,8 @@ head
       .section__head.head__projects-inner
         .head__projects-bg.head-about
           img(src='img/projects/projects.jpg', alt='')
-        .lead.parallax(data-speed='5')
-          .title # Mounting
+        .lead
+          .title.parallax(data-speed='5', data-direction="-1") #&nbspMANUFACTURING OF FURNITURE TO ORDER
       .container.service__inner-container
         .task__projects
           .product_selector.product-about
@@ -57,11 +57,6 @@ head
             .product_selector-photo.photo_left.parallax(data-speed='20',data-direction='1')
               img.parallax(data-speed='10',data-direction='1',src="img/projects/half.jpg", alt="")
               p.text.parallax(data-speed='5',data-direction='1') Two days before the release, Uli Sigg and director Michael Schindhelm attended
-        .letters
-          .letters_item.letters-r.parallax(data-direction='1') R
-          .letters_item.letters-i.parallax(data-speed='25',data-direction='1') I
-          .letters_item.letters-g.parallax(data-direction='1') G
-          .letters_item.letters-t.parallax(data-speed='25',data-direction='1') T
     section.section.section__links
       a.links.parallax(href='#', data-speed='15')
         .section_container
@@ -70,5 +65,10 @@ head
             .text(style="background-image: url('./img/mask.jpg')") next services
             .arrow
               .icon(style="background-image: url('./img/icons/arrow.png')")
+    .letters
+      .letters_item.service-inner.letters-r.parallax(data-direction='1') R
+      .letters_item.service-inner.letters-i.parallax(data-speed='25',data-direction='1') I
+      .letters_item.service-inner.letters-g.parallax(data-direction='1') G
+      .letters_item.service-inner.letters-t.parallax(data-speed='25',data-direction='1') T
   include ./_footer-inner.jade
 include ./_menu.jade
