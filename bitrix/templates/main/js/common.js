@@ -729,7 +729,7 @@ var $sum = $('.number__sum span');
      else{
      	$sum.text(slick.slideCount);
      }
-        let i = (currentSlide ? currentSlide : 0) + 1;
+        var i = (currentSlide ? currentSlide : 0) + 1;
         	if (i<10) {
         		i = '0'+i;
         	}
@@ -886,13 +886,13 @@ var timeout;
 					};
 			timeout = setTimeout(function(){
 
-				let clsr ='item__right';
-				let clsl ='item__left';
-				let clsc ='item__center';
-				let left = slider.find('.item__left');
-				let right = slider.find('.item__right');
-				let center = slider.find('.item__center');
-				let $this = _;
+				var clsr ='item__right';
+				var clsl ='item__left';
+				var clsc ='item__center';
+				var left = slider.find('.item__left');
+				var right = slider.find('.item__right');
+				var center = slider.find('.item__center');
+				var $this = _;
 
 			
 				if ($this.hasClass(clsl)&& !slider.hasClass('nohover')) {
@@ -979,7 +979,7 @@ function plotAgent(lat, long, text, id) {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 
-		let btn =$('.map-trigger'),
+		var btn =$('.map-trigger'),
 				parent = $('.section_contact'),
 				cover = parent.find('.head-about'),
 				title = parent.find('.lead');
