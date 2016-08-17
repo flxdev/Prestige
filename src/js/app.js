@@ -110,8 +110,6 @@ $(document).ready(function () {
 	if(design.length) {
 		var designerNav = design.find('.carousel__designer-navi'),
 			itemLength = design.find('.designer-slide').length - design.find('.swiper-slide-duplicate').length;
-
-		console.log(itemLength)
 		if(itemLength === 1) {
 			designerNav.hide();
 		}
@@ -203,7 +201,7 @@ $(document).ready(function () {
 	function Motion($motion) {
 		var $direction, $wrapper;
 
-		//console.log($motion.length)
+	
 
 		$('.sq-carousel').on('mousemove', function(e){
 			var x, y,
@@ -225,7 +223,7 @@ $(document).ready(function () {
 		});
 	};
 	function MotionKill($motion) {
-			//console.log($motion.length)
+	
 			TweenLite.killTweensOf($motion);
 	};
 	
@@ -428,7 +426,6 @@ $(document).ready(function () {
 				$titleInFirst = $first.find('.title'),
 				tl = new TimelineLite();
 
-				console.log($(currentTextIn).length)
 
 			if(currentTextIn.length !== 0) {
 				tl
@@ -860,7 +857,7 @@ jQuery.fn.toggleText = function() {
     	if (altText) {
     		this.data("alt-text", this.text());
     		this.text(altText);
-    		console.log(altText)
+    	
     	}
     };
 
