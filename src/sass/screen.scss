@@ -83,6 +83,7 @@ body {
 	//background-image: url(../img/bg.jpg);
 	background-size: cover;
 	min-width: $min-width;
+	overflow-x:hidden;
 }
 .parallax{
 	will-change:transform;
@@ -95,6 +96,9 @@ body {
 	min-width: $min-width;
 	position: relative;
 	height: 100%;
+	&.ie{
+		overflow-x: hidden;
+	}
 }
 .container {
 	max-width: 1600px;
@@ -175,6 +179,7 @@ body {
 		//padding-left: 39px;
 		@include x-rem(height, $h90);
 		@include x-rem(padding-left, 39px);
+		visibility: hidden;
 	}
 	&.frame_left {
 		// top: $h90;
@@ -297,6 +302,7 @@ body {
 	// letter-spacing: 3.69px;
 	@include x-rem(letter-spacing, 3.69px);
 	float: left;
+	visibility:visible;
 }
 .shared {
 	// width: $h90;
@@ -306,6 +312,7 @@ body {
 	float: right;
 	position: relative;
 	transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+	visibility:visible;
 	.shared-active-item {
 		// width: $h90;
 		// height: $h90;
@@ -1059,6 +1066,7 @@ body {
 				top: 0;
 				left: 0;
 				&.active {
+					z-index: 51;
 				}
 			}
 		}
@@ -1133,7 +1141,7 @@ body {
 }
 .lead {
 	position: absolute;
-	top: 25.5%;
+	top: 26.5%;
 	left: 23%;
 	//transform: translate(-50%, -50%);
 	// max-width: 800px;
@@ -1251,16 +1259,6 @@ body {
 					// margin-bottom: 80px;
 					@include x-rem(margin-bottom, 80px);
 					transition: color 0.3s ease;
-					&::after {
-						content: '';
-						height: 2px;
-						width: 100%;
-						background-color: $red;
-						position: absolute;
-						top: 100%;
-						left: 0;
-						transition: top 0.3s ease;
-					}
 					span {
 						font-family: $PragmaticaBook;
 						// font-size: 14px;
@@ -1268,12 +1266,7 @@ body {
 						// letter-spacing: 2.7px;
 						@include x-rem(letter-spacing, 2.7px);
 					}
-					&:hover {
-						color: $red;
-						&::after {
-							top: 0;
-						}
-					}
+
 				}
 			}
 		}
@@ -1329,6 +1322,7 @@ body {
 	.link_case {
 		text-align: left;
 		padding-left: 17.7%;
+		@include x-rem(margin-top, 30px);
 		.link-dash {
 			display: inline-block;		
 		}
@@ -1467,7 +1461,7 @@ body {
 				&.work_gallery-item-small_left {
 					.work_gallery-img {
 						img {
-							top: -28%;
+							top: -57%;
 						}
 					}
 				}
@@ -1615,6 +1609,7 @@ body {
 	position: relative;
 	text-align: left;
 	background-color: #000;
+	overflow:hidden;
 	&::after {
 		content: '';
 		position: absolute;
@@ -1636,23 +1631,29 @@ body {
 		display: inline-block;
 		text-align: left;
 		margin-left: 11.5%;
+		margin-top: 14.5%;
+		position: relative;
+		z-index: 5;
 	}
 	.burnImg1 {
 		// max-width: 535px;
-		@include x-rem(max-width, 535px);
-		width: 33.5%;
+		@include x-rem(max-width, 635px);
 		// height: 395px;
 		@include x-rem(height, 395px);
-		left: 0;
+		left: -50%;
 		top: 48%;
+		overflow: hidden;
+		z-index: 0;
+		img{
+			width:100%;
+		}
 	}
 	.burnImg2 {
 		// max-width: 555px;
 		@include x-rem(max-width, 555px);
-		width: 30%;
 		// height: 750px;
 		@include x-rem(height, 750px);
-		right: 8.7%;
+		right: -30%;
 		top: 10%;
 	}
 }
@@ -1678,6 +1679,10 @@ body {
 		pointer-events: none;
 	}
 }
+.burnable{
+	position: relative;
+	z-index: 0;
+}
 .text-lock {
 	@include x-rem(width, 380px);
 	//width: 380px;
@@ -1687,6 +1692,8 @@ body {
 	//margin-bottom: 60px;
 	@include x-rem(margin-top, 54px);
 	@include x-rem(margin-bottom, 60px);
+	position: relative;
+	z-index: 5;
 	.headingWrap {
 		font-family: $PragmaticaBook;
 		font-size: 14px;
@@ -1731,7 +1738,7 @@ body {
 .section_designer {
 	position: relative;
 	// padding: 181px 0 96px;
-	@include x-rem(padding, 118px 0 96px);
+	@include x-rem(padding, 238px 0 106px);
 	.lead {
 		position: relative;
 		left: auto;
@@ -1753,7 +1760,6 @@ body {
 .carousel__designer {
 	//width: 1127px;
 	// padding-top: 107px;
-	@include x-rem(padding-top, 107px);
 	overflow: visible;
 	@include x-rem(max-width, 1127px);
 	@include r(1599) {
@@ -1761,8 +1767,10 @@ body {
 	}
 	@include r(1150) {
 		margin-left: -3%;
+		@include x-rem(padding-top, 87px);
 	}
 	// float: left;
+
 	.carousel__designer-rotator {
 		.designer-slide {
 			font-size: 0;			
@@ -1883,7 +1891,7 @@ body {
 		color: $white;
 		opacity: 0.05;
 		// top: -102px;
-		@include x-rem(top, -102px);
+		@include x-rem(top, -20px);
 		// left: -55px;
 		@include x-rem(left, -55px);
 		z-index: 6;
@@ -1899,7 +1907,7 @@ body {
 		@include x-rem(width, 280px);	
 		@include x-rem(height, 380px);
 		overflow: hidden;
-		@include x-rem(margin-bottom,  16px);
+		@include x-rem(margin-bottom,  26px);
 		transform: translate(0, 0);
 		transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 		transition-delay: 0s;					
@@ -2019,17 +2027,17 @@ body {
 					@include x-rem(letter-spacing, 2px);
 					position: absolute;
 					@include x-rem(right, 16px);
-					@include x-rem(top, -10px);
+					@include x-rem(top, -5px);
 				}
 				&:hover {
 					span {
-						color: $red;
+						color: $white;
 					}
 				}
 				&.active {
 					&:hover {
 						span {
-							color: $red;
+							color: $white;
 						}
 					}
 					span {
@@ -2589,6 +2597,10 @@ body {
 	display: inline-block;
 	.photo__wrapper-container{
 		overflow: hidden;
+		@include x-rem(max-width, 560px);
+		img{
+			width:100%;
+		}
 	}
 	.text{
 		@include x-rem(margin-top, 35px);
@@ -2615,12 +2627,17 @@ body {
 .project__galery-item{
 	width:100%;
 	position: relative;
+	@include x-rem(height, 760px);
 }
 .item_photo{
 	width:100%;
 	display: inline-block;
 	float: left;
 	overflow:hidden;
+	img{
+		width:100%;
+		display: inline-block;
+	}
 }
 }
 .galery__nav{
@@ -2919,7 +2936,7 @@ body {
 		height:100%;
 		float:left;
 		position: relative;
-		@include x-rem(margin-left,50px);
+		@include x-rem(margin-left,100px);
 		@include x-rem(width,50px);
 		button{
 			position: absolute;
@@ -2967,7 +2984,7 @@ body {
 	width:100%;
 	@include x-rem(height,575px);
 	position: relative;
-	transform-style: preserve-3d;
+	@include x-rem(margin-bottom,75px);
 	perspective: 1000px;
 	.item__wrapper{
 		position: absolute;
@@ -3009,14 +3026,29 @@ body {
 	}
 	&.item__left{
 		opacity: .2;
-        transform: translateX(-350px) translateZ(-200px) rotateY(40deg);
-        &:hover{
-        	opacity:.6;
-        }
+    transform: translateX(-500px) translateZ(-200px) rotateY(40deg);
+    @include r(1280){
+    	transform: translateX(-400px) translateZ(-200px) rotateY(40deg);
+
+    }
+    @include r(1024){
+    	transform: translateX(-350px) translateZ(-200px) rotateY(40deg);
+
+    }
+    &:hover{
+    	opacity:.6;
+    }
 	}
 	&.item__right{
 		opacity: .2;
-    transform: translateX(350px) translateZ(-200px) rotateY(-40deg);
+    transform: translateX(500px) translateZ(-200px) rotateY(-40deg);
+    @include r(1280){
+    	transform: translateX(400px) translateZ(-200px) rotateY(-40deg);
+    }
+    @include r(1024){
+    	transform: translateX(350px) translateZ(-200px) rotateY(-40deg);
+
+    }
     &:hover{
     	opacity:.6;
     }

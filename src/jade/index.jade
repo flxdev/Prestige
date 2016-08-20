@@ -80,7 +80,7 @@ html
                   img(src='img/bg/Render.jpg', alt='')
             .carousel_text
               .carousel_text-item.active
-                a.title(href='#')
+                .title
                   | Penthouse Minsk 
                   span 2015
                 .product_selector
@@ -100,7 +100,7 @@ html
                       p
                         | Wooden table with a triangular- shaped hole in the middle.  Ideal for business meetings. Each place has a personal outlet for laptop
               .carousel_text-item
-                a.title(href='#')
+                .title
                   | 2Penthouse Minsk 
                   span 2015
                 .product_selector
@@ -120,7 +120,7 @@ html
                       p
                         | Wooden table with a triangular- shaped hole in the middle.  Ideal for business meetings. Each place has a personal outlet for laptop
               .carousel_text-item
-                a.title(href='#')
+                .title
                   | 3Penthouse Minsk 
                   span 2015
                 .product_selector
@@ -140,7 +140,7 @@ html
                       p
                         | Wooden table with a triangular- shaped hole in the middle.  Ideal for business meetings. Each place has a personal outlet for laptop
               .carousel_text-item
-                a.title(href='#')
+                .title
                   | 4Penthouse Minsk 
                   span 2015
                 .product_selector
@@ -199,21 +199,21 @@ html
                 |  in our brains, and how this magic
               p
                 | Many of our clients want to know how we create interior designs in our studio, what processes happen in our brains, and how this magic is then transformed into.
-            .link_case
-              a.link-dash.parallax(data-speed='15', href='#') +read more
+            .link_case.parallax(data-speed='20',data-direction='1')
+              a.link-dash( href='#') +read more
             span.date.parallax(data-speed='10') 1976
-          .burnable
-            .burnImg1.burn.parallax(data-speed='15')
-              img.parallax(src='img/bg/burnImgAbout1.jpg', data-speed='5', data-direction='-1')
-            .burnImg2.burn.parallax(data-speed='15')
-              img.parallax(src='img/bg/burnImgAbout2.jpg', data-speed='5', data-direction='-1')
+            .burnable
+              .burnImg1.burn.parallax(data-speed='15')
+                img.parallax(src='img/bg/burnImgAbout1.jpg', data-speed='5', data-direction='-1')
+              .burnImg2.burn.parallax(data-speed='15')
+                img.parallax(src='img/bg/burnImgAbout2.jpg', data-speed='5', data-direction='-1')
         section.section.section_designer
           .section_container
             .lead.parallax(data-speed='15')
               .title # designers
               .subtitle
                 | See 
-                a.link-dash.parallax(data-speed='15', href='#') all our designers
+                a.link-dash(href='#') all our designers
           .carousel__container
             .carousel__designer.swiper-container
               .carousel__designer-rotator.swiper-wrapper
@@ -221,7 +221,7 @@ html
                   .designer-item.parallax(data-speed='15', data-direction='1')
                     a(href='#')
                       span.counter 54.
-                      .designer-img.parallax( data-speed='15', data-direction='-1')
+                      .designer-img.parallax( data-speed='10', data-direction='-1')
                         img(src='img/designer/howard.jpg', alt='')
                       .designer__wrapper
                         .designer-name Dasha Chernaia
@@ -232,7 +232,7 @@ html
                   .designer-item.parallax(data-speed='15', data-direction='1')
                     a(href='#')
                       span.counter 25.
-                      .designer-img.parallax(data-speed='15', data-direction='-1')
+                      .designer-img.parallax(data-speed='10', data-direction='-1')
                         img(src='img/designer/howard.jpg', alt='')
                       .designer__wrapper
                         .designer-name Misha dolgorykii
@@ -240,7 +240,7 @@ html
                   .designer-item.parallax(data-speed='15', data-direction='1')
                     a(href='#')
                       span.counter 03.
-                      .designer-img.parallax(data-speed='15', data-direction='-1')
+                      .designer-img.parallax(data-speed='10', data-direction='-1')
                         img(src='img/designer/howard.jpg', alt='')
                       .designer__wrapper
                         .designer-name Timofei ivanov
