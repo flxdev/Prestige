@@ -65,6 +65,19 @@ input {
 	padding: 0;
 	margin: 0;
 	outline: none;
+	&:-moz-submit-invalid{
+			border: none;
+			outline: none;
+			border-color:transparent;
+	}
+}
+input::-ms-clear {
+   display: none;
+}
+html.ie{
+	.out{
+		overflow-x: hidden;
+	}
 }
 button {
 	border: none;
@@ -96,9 +109,6 @@ body {
 	min-width: $min-width;
 	position: relative;
 	height: 100%;
-	&.ie{
-		overflow-x: hidden;
-	}
 }
 .container {
 	max-width: 1600px;
@@ -189,6 +199,49 @@ body {
 		@include x-rem(bottom, $h90);
 		@include x-rem(top, $h90);
 		@include x-rem(width, $h90);
+	}
+}
+.left_scroll-container{
+	@include x-rem(width, 180px);
+	@include x-rem(height, 500px);
+	display: inline-block;
+	position: absolute;
+	top:50%;
+	transform:translateY(-50%);
+	font-size:0;
+	.left_scroll_pagin-wrap,.left_scroll_nav-wrap{
+		width:50%;
+		height:100%;
+		display: inline-block;
+		float: left;
+	}
+	.left_scroll-item{
+		@include x-rem(font-size, 18px);
+		color:$white;
+		display: inline-block;
+		height:20%;
+		width:100%;
+		text-align: right;
+		border:1px solid $white;
+		@include x-rem(padding-right, 30px);
+		span{
+			transform:translateY(-8px);
+			display: inline-block;
+		}
+		&:last-child{
+			height:0;
+		}
+	}
+	.left_scroll_nav-wrap{
+		position: relative;
+		.left_scroll-nav{
+			position: absolute;
+			width:100%;
+			@include x-rem(height, 2px);
+			top:0;
+			background: $white;
+			transition: top .2s ease;
+		}
 	}
 }
 .logo {
@@ -578,18 +631,24 @@ body {
 		display: block;
 		position: relative;
 		width: 100%;
-		z-index: 4px;
+		z-index: 4;
 		@include clearfix;
+		text-align: center;
 		.column {
 			width: 12.72%;
 			float: left;
-			display: block;
+			display: inline-block;
 			@include r(1400) {
 				width: 12.5%;
 			}
 			@include r(1150) {
 				width: 10.5%;
 			}
+			&:first-child{
+				ul{
+						text-align: center;
+					}
+				}
 			&:nth-child(2) {
 				width: 19%;
 				@include r(1150) {
@@ -621,6 +680,7 @@ body {
 				}
 			}
 			& > ul {
+				text-align: left;
 				& > li {
 					// margin-top: 144px;
 					// margin-bottom: 20px;
@@ -1159,6 +1219,9 @@ body {
 		// margin-bottom: 11px;
 		@include x-rem(margin-bottom, 11px);
 		text-transform: uppercase;
+		@include r(1024){
+			@include x-rem(font-size, 70px);
+		}
 	}
 	.subtitle {
 		font-family: $PragmaticaBold;
@@ -1322,7 +1385,7 @@ body {
 	.link_case {
 		text-align: left;
 		padding-left: 17.7%;
-		@include x-rem(margin-top, 30px);
+		@include x-rem(margin-top, 41px);
 		.link-dash {
 			display: inline-block;		
 		}
@@ -1594,7 +1657,7 @@ body {
 		position: relative;
 		z-index: 5;
 		// top: -55px;
-		@include x-rem(top, -55px);
+		@include x-rem(top, 15px);
 	}
 }
 .carousel_layout-text {
@@ -1663,6 +1726,7 @@ body {
 	margin: 0 auto;
 	position: relative;
 	z-index: 5;
+	@include x-rem(padding-top, 35px);
 	.date {
 		font-family: $PragmaticaBold;
 		//font-size: 71.96px;
@@ -2628,6 +2692,9 @@ body {
 	width:100%;
 	position: relative;
 	@include x-rem(height, 760px);
+	@include r(1024){
+		@include x-rem(height, 568px);
+	}
 }
 .item_photo{
 	width:100%;
@@ -3187,6 +3254,11 @@ body {
 	@include r(1024){
 		@include x-rem(min-width,1150px);
 		}
+	.project__galery-nav{
+			@include r(1024){
+				margin-top: 12%;
+		}
+	}
 	.popup__nav{
 		@include x-rem(padding,0 90px);
 		@include x-rem(height,60px);
@@ -3247,6 +3319,33 @@ body {
 	.wrapper__galery{
 		padding:0;
 		overflow: visible;
+		.item__title{
+			 	display: inline-block;
+			 	position: absolute;
+			 	color: $red;
+			 	top: 35%;
+			 	left:-6%;
+			  @include x-rem(font-size, 72px);
+			  @include x-rem(letter-spacing, 4px);
+			  text-transform: uppercase;
+			  width:80%;
+			  line-height: 1.389;
+				text-align:left;
+				transform: translate3d(0,4rem,0);
+				opacity:0;
+				font-weight:bold;
+				font-family: $PragmaticaBlack;
+				z-index: 1000;
+				transition: all .5s ease;
+				@include r(1024){
+					left:2%;
+				}
+				&.active{
+			 			transform: translate3d(0,0,0);
+						opacity:1;
+						transition: all .5s ease;
+					}
+			 }
 		.galery__nav{
 			@include x-rem(width, 133px);
 			@include x-rem(height, 133px);
@@ -3277,32 +3376,6 @@ body {
 					width:100%;
 				}
 			}
-			 .item__title{
-			 	display: inline-block;
-			 	position: absolute;
-			 	color: $red;
-			 	top: 35%;
-			 	left:-6%;
-			  @include x-rem(font-size, 72px);
-			  @include x-rem(letter-spacing, 4px);
-			  text-transform: uppercase;
-			  line-height: 1.389;
-				text-align:left;
-				transform: translate3d(0,4rem,0);
-				opacity:0;
-				font-weight:bold;
-				font-family: $PragmaticaBlack;
-				z-index: 1000;
-			 }
-			 .project__galery-item{
-			 	&.slick-current{
-			 		.item__title{
-			 			transform: translate3d(0,0,0);
-						opacity:1;
-						transition: all .5s ease;
-			 		}
-			 	}
-			 }
 		}
 		.galery__description-wrapper{
 			right:0;
@@ -3319,27 +3392,8 @@ body {
 							text-align: left;
 							cursor: pointer;
 							transform:translate3d(0,40%,0);
-							opacity:0;
+							opacity:1;
 							}
-							&.slick-current{
-								.link_case{
-									transform:translate3d(0,0,0);
-									opacity:1;
-									transition: all .4s;
-									&:first-child{
-										transition-delay: .15s;
-												}
-									&:nth-child(2){
-										transition-delay: .29s;
-												}
-									&:nth-child(3){
-										transition-delay: .4s;
-												}
-								}
-						&>.link_case {
-							@include x-rem(margin-top, 20px);
-						}
-						}
 					}
 				}
 			}
@@ -3450,6 +3504,9 @@ body {
 			}
 			form{
 				width:100%;
+				input{
+					box-shadow:none;
+				}
 				textarea{
 					position: relative;
 					z-index: 1;
@@ -3457,8 +3514,15 @@ body {
 					resize:none;
 					background: transparent;
 					border:none;
-					line-height:2.2 !important;
+					overflow: auto !important;
+					line-height:2.2!important;
 					word-wrap: break-word;
+					@include r(1280){
+						line-height:2.45!important;
+					}
+					@include r(1024){
+						line-height:2.65!important;
+					}
 				}
 				.form-error{
 					display: none !important;
@@ -3555,6 +3619,9 @@ body {
 					z-index: 4;
 					background:url(../img/bg/textarea.png);
 				  background-repeat:repeat-y;
+				  &.has-error{
+				  	background:url(../img/bg/textarea-err.png);
+				  }
 				  .help-block{
 						position: absolute;
 						bottom:-20px;

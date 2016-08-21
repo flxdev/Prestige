@@ -72,7 +72,7 @@
 				<div id="map_canvas"></div>
 			</div>
 			<div class="link_case">
-				<button type="button" data-alt-text="-hide map" class="map-trigger link-dash">-view map</button>
+				<button type="button" data-alt-text="-hide map" class="map-trigger link-dash">+view map</button>
 			</div>
 		</section>
 		<section class="section">
@@ -105,7 +105,7 @@
 						<div class="contact__block-form">
 							<form action="/message" method="post" name="form-contact" class="js-validate">
 								<div class="input__wrapper">
-									<input id="form_name" type="text" data-validation="length" data-validation-length="min2" class="form__input">
+									<input id="form_name" type="text" data-validation="length" data-validation-length="min2" data-validation-ignore=" " class="form__input">
 									<label for="form_name" data-speed="5" class="parallax label__name">name</label>
 								</div>
 								<div class="input__wrapper">
@@ -126,6 +126,10 @@
 										</div>
 									</button>
 								</div>
+								<!--тут все норм-->
+								<input type="text">
+								<input type="text">
+								<input type="text">
 							</form>
 							<div class="form__succes">
 								<p>Thank you! Your message<br>was successfully sent!</p>

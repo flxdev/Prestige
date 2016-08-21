@@ -7,6 +7,22 @@ html
     .out
       include ./_frame.jade
       .frame.frame_left
+        .left_scroll-container
+          .left_scroll_pagin-wrap
+            .left_scroll-item
+              span 01
+            .left_scroll-item
+              span 02
+            .left_scroll-item
+              span 03
+            .left_scroll-item
+              span 04
+            .left_scroll-item
+              span 05
+            .left_scroll-item
+              span 06
+          .left_scroll_nav-wrap
+            .left_scroll-nav
       include ./_grid.jade
       .wrapper
         section.section.section_carousel
@@ -218,31 +234,31 @@ html
             .carousel__designer.swiper-container
               .carousel__designer-rotator.swiper-wrapper
                 .designer-slide.swiper-slide
-                  .designer-item.parallax(data-speed='15', data-direction='1')
+                  .designer-item
                     a(href='#')
                       span.counter 54.
-                      .designer-img.parallax( data-speed='10', data-direction='-1')
+                      .designer-img
                         img(src='img/designer/howard.jpg', alt='')
-                      .designer__wrapper
+                      .designer__wrapper.parallax( data-speed='15', data-direction='1')
                         .designer-name Dasha Chernaia
                         span.designer-position
                           | interior design, 
                           br
                           |  design furniture
-                  .designer-item.parallax(data-speed='15', data-direction='1')
+                  .designer-item
                     a(href='#')
                       span.counter 25.
-                      .designer-img.parallax(data-speed='10', data-direction='-1')
+                      .designer-img
                         img(src='img/designer/howard.jpg', alt='')
-                      .designer__wrapper
+                      .designer__wrapper.parallax(data-speed='15', data-direction='1')
                         .designer-name Misha dolgorykii
                         span.designer-position design furniture
-                  .designer-item.parallax(data-speed='15', data-direction='1')
+                  .designer-item
                     a(href='#')
                       span.counter 03.
-                      .designer-img.parallax(data-speed='10', data-direction='-1')
+                      .designer-img
                         img(src='img/designer/howard.jpg', alt='')
-                      .designer__wrapper
+                      .designer__wrapper.parallax(data-speed='15', data-direction='1')
                         .designer-name Timofei ivanov
                         span.designer-position
                           | interior design, 

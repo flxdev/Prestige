@@ -23,7 +23,7 @@ head
         #map_canvas
         
       .link_case
-         button.map-trigger(type='button',data-alt-text='-hide map').link-dash -view map
+         button.map-trigger(type='button',data-alt-text='-hide map').link-dash +view map
     section.section
       .contaiber
         .c-contact-wrapper
@@ -50,7 +50,7 @@ head
             .contact__block-form
               form.js-validate(action='/message', method='post', name='form-contact')
                 .input__wrapper
-                  input.form__input#form_name(type='text',data-validation="length", data-validation-length="min2")
+                  input.form__input#form_name(type='text',data-validation="length", data-validation-length="min2",data-validation-ignore=' ')
                   label.parallax.label__name(for='form_name',data-speed='5') name
                 .input__wrapper
                   input.form__input#form_mail(type='email',data-validation="email")
@@ -64,6 +64,10 @@ head
                       svg(viewbox='0 0 41.2 19', xmlns='http://www.w3.org/2000/svg')
                         path.fill(d='m0,8.9l25,0l0,2l-25,0l0,-2z', clip-rule='evenodd', fill-rule='evenodd')
                         path.stroke(d='m39.2,9.5l-13.5,7.8l0,-15.6l13.5,7.8z', stroke-miterlimit='10', stroke-width='2', fill='none')
+                //тут все норм
+                input(type="text")
+                input(type="text")
+                input(type="text")
               .form__succes
                 p Thank you! Your message
                   br
