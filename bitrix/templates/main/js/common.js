@@ -180,35 +180,33 @@ function grayscale(src){
 });
 
 $(document).ready(function () {
+
 	if($('.left_scroll-container').length){
-		var 
-				blk1 = $('.section_carousel').height(),
-				blk2 = $('.section_projects').height(),
-				blk3 = $('.section_services').height(),
-				blk4 = $('.section_about').height(),
-				blk5 = $('.section_designer').height(),
-				blk6 = $('.footer').height(),
-				body = blk1 +blk2 +blk3 +blk4 +blk5 +blk6+120;
-				target = $('.left_scroll-nav'),
-				blk1H =blk1 *100 / body +'%',
-				blk2H =blk2 *100 / body +'%',
-				blk3H =blk3 *100 / body +'%',
-				blk4H =blk4 *100 / body +'%',
-				blk5H =blk5 *100 / body +'%',
-				blk6H =blk6 *100 / body +'%';
-				console.log(blk1H,blk2H,blk3H,blk4H,blk5H,blk6H)
+
 				$(window).scroll(function(){
-					var scrollH = $(window).scrollTop();
-					var tarH = scrollH * 100 / body +'%';
-					target.css({
-						'top': tarH
-					})
-					
+					var
+						item = $('.left_scroll-item');
+
+						var scrollm = function(target){
+							var vScroll = $(window).scrollTop();
+							var targetO = target.offset().top;
+									console.log(targetO)
+							if(vScroll > targetO){
+									
+
+								/*item.each(function(){
+									$(this).find().data('target').addClass('active').siblinds().removeClass('active');
+								});*/
+							}
+						}
+						scrollm($('.section_carousel'));
 				});
+
 				$('.left_scroll-item').each(function(){
 						$(this).offset().top
 						console.log()
 					});
+
 	}
 
 	if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1|| navigator.userAgent.toLowerCase().indexOf('rv:11') > -1){
@@ -813,13 +811,24 @@ function Popup(){
 
 		
 					$(id).addClass('opened').find('.item__title').addClass('active');
+					$('body').css('overflow-y','hidden')
 				close.click(function(){
 					$(id).removeClass('opened');
 					$(id).find('.project__gallery').slick('unslick');
-
+					$('body').css('overflow-y','auto')
+				});
+				$(document).mouseup(function (e){ 
+					var div = $('.popup__container');
+					if (!div.is(e.target) 
+					    && div.has(e.target).length === 0) {
+						div.parent().removeClass('opened');
+						$("body").css("overflow-y","scroll"); 
+						$(id).find('.project__gallery').slick('unslick');
+					}
 				});
 
-				});
+
+			});
 
 
 	};

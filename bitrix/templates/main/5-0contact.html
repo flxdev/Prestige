@@ -5,6 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=1024">
+	<meta name="theme-color" content="#000">
+	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="css/screen.css">
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyA5YZJzqmYccat0wSPnagC9TXPP4xTugFM"></script>
 	<script src="js/common.js"></script>
@@ -114,7 +116,7 @@
 								</div>
 								<div class="input__wrapper">
 									<div class="wrapper-textarea">
-										<textarea id="form_msg" type="textarea" rows="3" data-validation="length" data-validation-length="min10" class="form__input"></textarea>
+										<textarea id="form_msg" type="textarea" rows="3" data-validation="length" data-validation-length="min10" data-validation-ignore=" " style="min-height:90px;" class="form__input"></textarea>
 									</div>
 									<label for="form_msg" data-speed="5" class="parallax label__msg">message</label>
 									<button type="submit" class="form__button">send
