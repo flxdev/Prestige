@@ -181,33 +181,54 @@ function grayscale(src){
 
 $(document).ready(function () {
 
-	if($('.left_scroll-container').length){
+if($('.left_scroll-container').length){
 
-				$(window).scroll(function(){
-					var
-						item = $('.left_scroll-item');
 
-						var scrollm = function(target){
-							var vScroll = $(window).scrollTop();
-							var targetO = target.offset().top;
-									console.log(targetO)
-							if(vScroll > targetO){
-									
+		var	scrolling = false;
+		var contentSections = $('.block-section'),
+			verticalNavigation = $('.left_scroll_pagin-wrap'),
+			navigationItems = verticalNavigation.find('.left_scroll-item');
 
-								/*item.each(function(){
-									$(this).find().data('target').addClass('active').siblinds().removeClass('active');
-								});*/
-							}
-						}
-						scrollm($('.section_carousel'));
+			$(window).on('scroll', checkScroll);
+
+			function checkScroll() {
+				if( !scrolling ) {
+					scrolling = true;
+					(!window.requestAnimationFrame) ? setTimeout(updateSections, 300) : window.requestAnimationFrame(updateSections);
+				}
+			}
+			verticalNavigation.on('click','.left_scroll-item',function(event){
+		        event.preventDefault();
+		        smoothScroll($(this));
+		        verticalNavigation.removeClass('open');
+    		});
+
+			function updateSections() {
+				var halfWindowHeight = $(window).height()/2,
+					scrollTop = $(window).scrollTop();
+				contentSections.each(function(){
+					var section = $(this),
+						sectionId = section.attr('id'),
+						count = section.data('count'),
+						trg = section.data('target');
+						navigationItem = navigationItems.filter("[data-target=" + trg + "]");
+					( (section.offset().top - halfWindowHeight < scrollTop ) && ( section.offset().top + section.outerHeight() - halfWindowHeight > scrollTop) )
+						? navigationItem.addClass('active')
+						: navigationItem.removeClass('active');
 				});
+				scrolling = false;
+			}
+	function smoothScroll(target) {
+		var data = target.data('target');
+		var elem = $('.' + data);
 
-				$('.left_scroll-item').each(function(){
-						$(this).offset().top
-						console.log()
-					});
-
+        $('body,html').animate(
+        	{'scrollTop':elem.offset().top},
+        	500
+        );
 	}
+
+}
 
 	if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1|| navigator.userAgent.toLowerCase().indexOf('rv:11') > -1){
 		$('.section__links').find('.text').css({

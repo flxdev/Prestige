@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=1024">
 		<meta name="theme-color" content="#000">
 		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
 		<link rel="stylesheet" href="css/screen.css">
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyA5YZJzqmYccat0wSPnagC9TXPP4xTugFM"></script>
 		<script src="js/common.js"></script>
@@ -51,15 +52,12 @@
 			<div class="frame frame_left">
 				<div class="left_scroll-container">
 					<div class="left_scroll_pagin-wrap">
-						<div data-target="wrapper" class="left_scroll-item active"><span>01</span></div>
-						<div data-target="section_carousel" class="left_scroll-item"><span>02</span></div>
-						<div data-target="section_projects" class="left_scroll-item"><span>03</span></div>
-						<div data-target="section_services" class="left_scroll-item"><span>04</span></div>
-						<div data-target="section_about" class="left_scroll-item"><span>05</span></div>
+						<div data-target="section_carousel" class="left_scroll-item active"><span>01</span></div>
+						<div data-target="section_projects" class="left_scroll-item"><span>02</span></div>
+						<div data-target="section_services" class="left_scroll-item"><span>03</span></div>
+						<div data-target="section_about" class="left_scroll-item"><span>04</span></div>
+						<div data-target="section_designer" class="left_scroll-item"><span>05</span></div>
 						<div data-target="footer" class="left_scroll-item"><span>06</span></div>
-					</div>
-					<div class="left_scroll_nav-wrap">
-						<div class="left_scroll-nav"></div>
 					</div>
 				</div>
 			</div>
@@ -70,7 +68,7 @@
 				</div>
 			</div>
 			<div class="wrapper">
-				<section class="section section_carousel">
+				<section data-target="section_carousel" data-count="0" class="section section_carousel block-section">
 					<div data-speed="15" class="lead parallax">
 						<div class="title"># THE PRESTIGE</div>
 						<div class="subtitle">Furniture Factory <br> in Belarus</div>
@@ -132,7 +130,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="section section_projects">
+				<section data-target="section_projects" data-count="1" class="section section_projects block-section">
 					<div data-speed="15" class="lead parallax">
 						<div class="title"># projects</div>
 					</div>
@@ -265,7 +263,7 @@
 						<div data-speed="15" class="link_case parallax"><a href="#" class="link-dash">+view project</a></div>
 					</div>
 				</section>
-				<section class="section section_services">
+				<section data-target="section_services" data-count="2" class="section section_services block-section">
 					<div data-speed="15" class="lead parallax">
 						<div class="title"># services</div>
 					</div>
@@ -282,7 +280,7 @@
 					</div>
 					<div data-speed="15" class="link_case parallax"><a href="#" class="link-dash">+all services</a></div>
 				</section>
-				<section class="section section_about">
+				<section data-target="section_about" data-count="3" class="section section_about block-section">
 					<div class="section_container">
 						<div data-speed="15" class="lead parallax">
 							<div class="title"># about</div>
@@ -299,7 +297,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="section section_designer">
+				<section data-target="section_designer" data-count="4" class="section section_designer block-section">
 					<div class="section_container">
 						<div data-speed="15" class="lead parallax">
 							<div class="title"># designers</div>
@@ -341,7 +339,7 @@
 				</section>
 				<div class="letters"><span style="top:25%; left:9.5%; " data-direction="1" class="letters_item parallax">P</span><span style="top:29%; right:20%; " data-direction="1" class="letters_item parallax">R</span><span style="top:48%; left:16%; " data-direction="1" class="letters_item parallax">E</span><span style="top:62%; right:20.3%; " data-direction="1" class="letters_item parallax">S</span><span style="bottom:-4%; left:24.2%; " data-direction="1" class="letters_item parallax">G</span><span style="bottom:0; right:19.1%; " data-direction="1" class="letters_item parallax">I</span></div>
 			</div>
-			<footer class="footer">
+			<footer data-target="footer" data-count="5" class="footer block-section">
 				<div class="section_container">
 					<div data-speed="5" class="lead parallax">
 						<div class="title"># contacts</div>
